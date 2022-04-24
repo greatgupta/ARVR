@@ -64,6 +64,7 @@ function moveMarker({marker, x=0, y=0, r=0, theta=0, pos, lerpTo, lerpAmt}) {
 		coord[1] = coord[1]*(1-lerpAmt) + lerpAmt*lerpTo[1]
 	}
 	pt.setCoordinates(coord)
+	console.log("player:",marker.getGeometry())
 	return marker
 }
 

@@ -1,0 +1,248 @@
+[
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "node/4837676614",
+                  "access": "customers",
+                  "leisure": "sports_centre",
+                  "name": "Norris Aquatics Center",
+                  "operator": "Northwestern University",
+                  "sport": "swimming"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.6736339,
+                        42.0600667
+                  ]
+            },
+            "id": "node/4837676614"
+      },
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "node/2295262310",
+                  "addr:city": "Evanston",
+                  "addr:housenumber": "2311",
+                  "addr:postcode": "60208",
+                  "addr:state": "IL",
+                  "addr:street": "Campus Drive",
+                  "addr:street:name": "Campus",
+                  "addr:street:type": "Drive",
+                  "name": "The Garage",
+                  "office": "coworking",
+                  "website": "https://thegarage.northwestern.edu"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.6736082,
+                        42.0596879
+                  ]
+            },
+            "id": "node/2295262310"
+      },
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "node/9578989644",
+                  "highway": "street_lamp",
+                  "lamp_mount": "cast steel mast",
+                  "name": "Linus B. H\u00f6ller Enlightenment Memorial Lamppost"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.6704589,
+                        42.0566479
+                  ]
+            },
+            "id": "node/9578989644"
+      },
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "node/3938460118",
+                  "name": "Community Data Science Collective",
+                  "office": "research"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.6739811,
+                        42.0583776
+                  ]
+            },
+            "id": "node/3938460118"
+      },
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "node/4877140200",
+                  "addr:city": "Evanston",
+                  "addr:housenumber": "2240",
+                  "addr:postcode": "60208",
+                  "addr:state": "IL",
+                  "addr:street": "North Campus Drive",
+                  "addr:unit": "1-310",
+                  "level": "1",
+                  "name": "People, Space, and Algorithms (PSA) Research Group",
+                  "office": "research",
+                  "start_date": "08-01-2016",
+                  "website": "http://www.psagroup.org"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.6734329,
+                        42.0583852
+                  ]
+            },
+            "id": "node/4877140200"
+      },
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "node/7050921913",
+                  "addr:city": "Evanston",
+                  "addr:housenumber": "2133",
+                  "addr:postcode": "60208",
+                  "addr:state": "IL",
+                  "addr:street": "Sheridan Road",
+                  "addr:unit": "3.230",
+                  "name": "Delta Lab",
+                  "office": "research"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.676595,
+                        42.0569711
+                  ]
+            },
+            "id": "node/7050921913"
+      },
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "node/368074475",
+                  "addr:city": "Evanston",
+                  "addr:housenumber": "2003",
+                  "addr:postcode": "60208",
+                  "addr:state": "IL",
+                  "addr:street": "Sheridan Road",
+                  "building": "yes",
+                  "ele": "183",
+                  "gnis:county_name": "Cook",
+                  "gnis:feature_id": "2044319",
+                  "gnis:import_uuid": "57871b70-0100-4405-bb30-88b2e001a944",
+                  "gnis:reviewed": "no",
+                  "name": "Arthur Andersen Hall",
+                  "source": "USGS Geonames"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.6762285,
+                        42.0543479
+                  ]
+            },
+            "id": "node/368074475"
+      },
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "node/2274331662",
+                  "name": "Northwestern University Knight Lab",
+                  "website": "http://knightlab.northwestern.com"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.6739374,
+                        42.0507242
+                  ]
+            },
+            "id": "node/2274331662"
+      },
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "node/4846512378",
+                  "amenity": "bicycle_rental",
+                  "brand": "Divvy",
+                  "brand:wikidata": "Q16973938",
+                  "brand:wikipedia": "en:Divvy",
+                  "capacity": "15",
+                  "divvy:id": "605",
+                  "fee": "yes",
+                  "name": "University Library (NU)",
+                  "network": "Divvy",
+                  "network:wikidata": "Q16973938",
+                  "network:wikipedia": "en:Divvy",
+                  "opening_hours": "24/7",
+                  "operator": "Motivate",
+                  "operator:type": "private",
+                  "operator:wikidata": "Q4735954",
+                  "operator:wikipedia": "en:Motivate (company)",
+                  "payment:credit_cards": "yes"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.6734197,
+                        42.0529892
+                  ]
+            },
+            "id": "node/4846512378"
+      },
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "node/7313805184",
+                  "amenity": "cinema",
+                  "name": "Block Cinema",
+                  "website": "https://www.blockmuseum.northwestern.edu/cinema/",
+                  "wikidata": "Q88106325"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.6727316,
+                        42.0523227
+                  ]
+            },
+            "id": "node/7313805184"
+      },
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "node/2239483482",
+                  "entrance": "entrance",
+                  "foot": "yes"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.6762437,
+                        42.0578247
+                  ]
+            },
+            "id": "node/2239483482"
+      },
+      {
+            "type": "Feature",
+            "properties": {
+                  "@id": "node/4777157991",
+                  "entrance": "yes"
+            },
+            "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                        -87.6755532,
+                        42.0532291
+                  ]
+            },
+            "id": "node/4777157991"
+      }
+]
