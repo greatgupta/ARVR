@@ -403,7 +403,6 @@ let map = new InteractiveMap({
 					<br>
 						<div>Welcome to {{gameState.currentLandmark}}</div>
 						<div> How many startups were founded in {{gameState.currentLandmark}}</div>
-						<div> What is you namea</div>
 						<button v-on:click="wrong">around 100</button>
 						<button v-on:click="wrong">less than 500</button>
 						<button v-on:click="show">around 1000</button>
