@@ -62,8 +62,6 @@ body {
 	/*border:  2px solid cyan;*/
 }
 
-
-
 .column {
 	flex: 1;
 	/*border:  2px solid cyan;*/
@@ -72,19 +70,87 @@ body {
 #app>#main-columns {
 	flex:  1;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 	/*border:  2px solid pink;*/
 }
 
-#app>#main-columns>.main-column {
+#app>#main-columns>.main-column:nth-child(1) {
 	position: relative;
-	
+	display: flex;
+	width: 80%;
+	height: 10%;
+	align-content: center;
+	justify-content: space-evenly;
+	flex-direction: row;
+}
+
+
+#app>#main-columns>.main-column:nth-child(2) {
+	position: relative;
 	/*border:  2px solid purple;*/
 	overflow: hidden;
 	display: flex;
-
 	flex-direction: column;
+	width: 90%;
+	height: 70%;
 }
+
+.controls {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.mapBtn {
+	align-items: center;
+	background-color: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: .25rem;
+	box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+	box-sizing: border-box;
+	color: rgba(0, 0, 0, 0.85);
+	cursor: pointer;
+	display: inline-flex;
+	font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	justify-content: center;
+	line-height: 1.25;
+	margin: 0;
+	min-height: 3rem;
+	padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+	position: relative;
+	text-decoration: none;
+	transition: all 250ms;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: baseline;
+	width: auto;
+  }
+  
+  .mapBtn:hover,
+  .mapBtn:focus {
+	border-color: rgba(0, 0, 0, 0.15);
+	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+	color: rgba(0, 0, 0, 0.65);
+  }
+  
+  .mapBtn:hover {
+	transform: translateY(-1px);
+  }
+  
+  .mapBtn:active {
+	background-color: #F0F0F1;
+	border-color: rgba(0, 0, 0, 0.15);
+	box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+	color: rgba(0, 0, 0, 0.65);
+	transform: translateY(0);
+  }
+  
 
 
 @media screen and (max-width : 800px) {
@@ -94,6 +160,28 @@ body {
 		flex:  1;
 		/*background-color: magenta;*/
 	}
+
+	#app>#main-columns>.main-column:nth-child(1) {
+		position: relative;
+		display: flex;
+		width: 80%;
+		height: 30%;
+		align-content: center;
+		justify-content: space-evenly;
+		flex-direction: row;
+	}
+		
+
+	#app>#main-columns>.main-column:nth-child(2) {
+		position: relative;
+		/*border:  2px solid purple;*/
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+		height: 40%;
+	}
+	
 
 	body {
 		/*border: 3px solid pink;*/

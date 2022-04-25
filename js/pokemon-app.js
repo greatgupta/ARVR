@@ -11,7 +11,7 @@ const UPDATE_RATE = 100
  If its vertical, the columns can become sections in one column
  */
 
-
+let instructions = "Please select a landmark \n and answer the questions to earn points."
 let landmarkCount = 0
 let pokemon = [
 	"Bulbasaur",
@@ -1006,13 +1006,12 @@ window.onload = (event) => {
 		<header></header>
 			<div id="main-columns">
 
-				<div class="main-column" style="flex:1;overflow:scroll;max-height:200px">
-					(TODO, add your own gamestate)
-					{{gameState}}
-					<div id="quiz"></div>
+				<div class="main-column">
+					<div id="instructions">{{instructions}}</div>
+					<div id="quiz">{{gameState}}</div>
 				</div>
 				
-				<div class="main-column" style="overflow:hidden;width:${MAP_SIZE}px;height:${MAP_SIZE}px">
+				<div class="main-column">
 					<location-widget :map="map" />
 				
 				</div>
@@ -1023,9 +1022,9 @@ window.onload = (event) => {
 
 		data() {
 			return {
-			
 				map: map,
-				gameState: gameState
+				gameState: gameState,
+				instructions: instructions
 			}
 		},
 

@@ -30,8 +30,8 @@ const locationWidget = {
 	template: `
 	<div class="widget widget-location">
 		<div class="controls">
-			<button @click="map.useLocation = !map.useLocation">use real location</button>
-			<button @click="map.automove = !map.automove">automove</button>
+			<button class="mapBtn" @click="map.useLocation = !map.useLocation">Use Real Location</button>
+			<button class="mapBtn" @click="map.automove = !map.automove">Automove</button>
 
 		</div>
 		<table>
