@@ -255,10 +255,7 @@ let pokemon = [
 let gameState = {
 	currentLandmark: "",
 	points: 0,
-	captured: [],
-	messages: [],
-	pokemon: [],
-	destinationList:[]
+	captured: []
 }
 
 // Create an interactive map
@@ -340,10 +337,8 @@ let map = new InteractiveMap({
 			gameState.currentLandmark = landmark.name
 			// Have we captured this?
 			if (!gameState.captured.includes(landmark.name)) {
-				gameState.captured.push(landmark.name)
+				
 				// Add a message
-				gameState.messages.push(`You captured ${landmark.name} for ${landmark.points} points`)
-				gameState.pokemon.push(pokemon[Math.floor(Math.random()*pokemon.length)])
 				//console.log(gameState.pokemon[gameState.pokemon.length-1])
 				//window.alert("Congratulations you caught "+gameState.pokemon[gameState.pokemon.length-1])				
 			
@@ -356,12 +351,12 @@ let map = new InteractiveMap({
 					<header></header>
 					<br>
 						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<div> Your Question of the day is</div>
-						<div> What is you namea</div>
-						<button v-on:click="show">Option1</button>
-						<button v-on:click="wrong">Option2</button>
-						<button v-on:click="wrong">Option3</button>
-						<button v-on:click="wrong">Option4</button>
+						<p> Your Question of the day is</p>
+						<div> The {{gameState.currentLandmark}} is which style patisserie</div>
+						<button v-on:click="show">French</button>
+						<button v-on:click="wrong">Italian</button>
+						<button v-on:click="wrong">American</button>
+						<button v-on:click="wrong">German</button>
 					<footer></footer>
 					</div>`,
 			
@@ -376,6 +371,7 @@ let map = new InteractiveMap({
 							console.log("option 1 selected")
 							gameState.points +=1
 							window.alert("Correct answer, carry on to next location")
+							gameState.captured.push(landmark.name)
 							document.getElementById("quiz").style.display="none"
 
 						},
@@ -406,12 +402,12 @@ let map = new InteractiveMap({
 					<header></header>
 					<br>
 						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<div> Your Question of the day is</div>
+						<div> How many startups were founded in {{gameState.currentLandmark}}</div>
 						<div> What is you namea</div>
-						<button v-on:click="show">Option1</button>
-						<button v-on:click="wrong">Option2</button>
-						<button v-on:click="wrong">Option3</button>
-						<button v-on:click="wrong">Option4</button>
+						<button v-on:click="wrong">around 100</button>
+						<button v-on:click="wrong">less than 500</button>
+						<button v-on:click="show">around 1000</button>
+						<button v-on:click="wrong">more than 2000</button>
 					<footer></footer>
 					</div>`,
 			
@@ -507,11 +503,11 @@ let map = new InteractiveMap({
 					<br>
 						<div>Welcome to {{gameState.currentLandmark}}</div>
 						<div> Your Question of the day is</div>
-						<div> What is you namea</div>
-						<button v-on:click="show">Option1</button>
-						<button v-on:click="wrong">Option2</button>
-						<button v-on:click="wrong">Option3</button>
-						<button v-on:click="wrong">Option4</button>
+						<div> What was the name of northwestern president who bought the lakefill area </div>
+						<button v-on:click="wrong">George washington</button>
+						<button v-on:click="show">J Roscoe Miller</button>
+						<button v-on:click="wrong">Patrik G</button>
+						<button v-on:click="wrong">Shirley V Ryan</button>
 					<footer></footer>
 					</div>`,
 			
@@ -557,11 +553,11 @@ let map = new InteractiveMap({
 					<br>
 						<div>Welcome to {{gameState.currentLandmark}}</div>
 						<div> Your Question of the day is</div>
-						<div> What is you namea</div>
-						<button v-on:click="show">Option1</button>
-						<button v-on:click="wrong">Option2</button>
-						<button v-on:click="wrong">Option3</button>
-						<button v-on:click="wrong">Option4</button>
+						<div> Who lead the PSA group</div>
+						<button v-on:click="show">Brent Hecht</button>
+						<button v-on:click="wrong">Allen Lin</button>
+						<button v-on:click="wrong">Nick Vincent</button>
+						<button v-on:click="wrong">Isaac Johnson</button>
 					<footer></footer>
 					</div>`,
 			
@@ -607,11 +603,9 @@ let map = new InteractiveMap({
 					<br>
 						<div>Welcome to {{gameState.currentLandmark}}</div>
 						<div> Your Question of the day is</div>
-						<div> What is you namea</div>
-						<button v-on:click="show">Option1</button>
-						<button v-on:click="wrong">Option2</button>
-						<button v-on:click="wrong">Option3</button>
-						<button v-on:click="wrong">Option4</button>
+						<div>Delta Lab is the first interdisciplinary research lab and design studio at Northwestern University. They study, design, and build systems in the domain of social and crowd computing, human computer interaction, learning sciences, civics, and innovation. </div>
+						<button v-on:click="show">True</button>
+						<button v-on:click="wrong">False</button>
 					<footer></footer>
 					</div>`,
 			
@@ -657,11 +651,11 @@ let map = new InteractiveMap({
 					<br>
 						<div>Welcome to {{gameState.currentLandmark}}</div>
 						<div> Your Question of the day is</div>
-						<div> What is you namea</div>
-						<button v-on:click="show">Option1</button>
-						<button v-on:click="wrong">Option2</button>
-						<button v-on:click="wrong">Option3</button>
-						<button v-on:click="wrong">Option4</button>
+						<div> {{gameState.currentLandmark}} was built in</div>
+						<button v-on:click="show"> 1972</button>
+						<button v-on:click="wrong">1987</button>
+						<button v-on:click="wrong">2001</button>
+						<button v-on:click="wrong">1982</button>
 					<footer></footer>
 					</div>`,
 			
@@ -707,11 +701,11 @@ let map = new InteractiveMap({
 					<br>
 						<div>Welcome to {{gameState.currentLandmark}}</div>
 						<div> Your Question of the day is</div>
-						<div> What is you namea</div>
-						<button v-on:click="show">Option1</button>
-						<button v-on:click="wrong">Option2</button>
-						<button v-on:click="wrong">Option3</button>
-						<button v-on:click="wrong">Option4</button>
+						<div>Which tool is not made by {{gameState.currentLandmark}}</div>
+						<button v-on:click="show">ARScene</button>
+						<button v-on:click="wrong">SceneVR</button>
+						<button v-on:click="wrong">Juxatpose</button>
+						<button v-on:click="wrong">Soundcit</button>
 					<footer></footer>
 					</div>`,
 			
@@ -757,11 +751,11 @@ let map = new InteractiveMap({
 					<br>
 						<div>Welcome to {{gameState.currentLandmark}}</div>
 						<div> Your Question of the day is</div>
-						<div> What is you namea</div>
-						<button v-on:click="show">Option1</button>
-						<button v-on:click="wrong">Option2</button>
-						<button v-on:click="wrong">Option3</button>
-						<button v-on:click="wrong">Option4</button>
+						<div> {{gameState.currentLandmark}} was designed by</div>
+						<button v-on:click="show">Walter Nesch</button>
+						<button v-on:click="wrong">henry Crown</button>
+						<button v-on:click="wrong">Patrick kellog</button>
+						<button v-on:click="wrong">Charles Deering</button>
 					<footer></footer>
 					</div>`,
 			
@@ -807,11 +801,9 @@ let map = new InteractiveMap({
 					<br>
 						<div>Welcome to {{gameState.currentLandmark}}</div>
 						<div> Your Question of the day is</div>
-						<div> What is you namea</div>
-						<button v-on:click="show">Option1</button>
-						<button v-on:click="wrong">Option2</button>
-						<button v-on:click="wrong">Option3</button>
-						<button v-on:click="wrong">Option4</button>
+						<div> Block cinema is free for all</div>
+						<button v-on:click="show">True</button>
+						<button v-on:click="wrong">False</button>
 					<footer></footer>
 					</div>`,
 			
@@ -857,11 +849,11 @@ let map = new InteractiveMap({
 					<br>
 						<div>Welcome to {{gameState.currentLandmark}}</div>
 						<div> Your Question of the day is</div>
-						<div> What is you namea</div>
-						<button v-on:click="show">Option1</button>
-						<button v-on:click="wrong">Option2</button>
-						<button v-on:click="wrong">Option3</button>
-						<button v-on:click="wrong">Option4</button>
+						<div> {{gameState.currentLandmark}} was founded in</div>
+						<button v-on:click="show">1942</button>
+						<button v-on:click="wrong">1842</button>
+						<button v-on:click="wrong">1943</button>
+						<button v-on:click="wrong">1987</button>
 					<footer></footer>
 					</div>`,
 			
@@ -907,11 +899,11 @@ let map = new InteractiveMap({
 					<br>
 						<div>Welcome to {{gameState.currentLandmark}}</div>
 						<div> Your Question of the day is</div>
-						<div> What is you namea</div>
-						<button v-on:click="show">Option1</button>
-						<button v-on:click="wrong">Option2</button>
-						<button v-on:click="wrong">Option3</button>
-						<button v-on:click="wrong">Option4</button>
+						<div> {{gameState.currentLandmark}} is modeled after which monument</div>
+						<button v-on:click="show">King's College Chapel, England</button>
+						<button v-on:click="wrong">Charles Deering Architectural Building</button>
+						<button v-on:click="wrong">Ryan Musical Center</button>
+						<button v-on:click="wrong">Chapel of the first, New England</button>
 					<footer></footer>
 					</div>`,
 			
@@ -958,7 +950,7 @@ let map = new InteractiveMap({
 		// e.g. (2->1, 0->-1)
 		//console.log('dist:',dist)
 		if(oldLevel==2 && newLevel<2){
-			gameState.landmark=""
+			gameState.currentLandmark=""
 		document.getElementById("quiz").style.display="none"
 		console.log("exit", landmark.name, oldLevel,newLevel)
 		}
@@ -1007,8 +999,8 @@ window.onload = (event) => {
 			<div id="main-columns">
 
 				<div class="main-column">
-					<div id="instructions">{{instructions}}</div>
-					<div id="quiz">{{gameState}}</div>
+					<div id="instructions">{{instructions}} {{gameState}}</div>
+					<div id="quiz"></div>
 				</div>
 				
 				<div class="main-column">

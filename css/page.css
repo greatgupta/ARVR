@@ -84,9 +84,15 @@ body {
 	align-content: center;
 	justify-content: space-evenly;
 	flex-direction: row;
+	padding-bottom: 20px;
 }
 
-
+#app>#main-columns>.main-column:nth-child(1)>#instructions{
+	width:50%
+}
+#app>#main-columns>.main-column:nth-child(1)>#quiz{
+	width:50%
+}
 #app>#main-columns>.main-column:nth-child(2) {
 	position: relative;
 	/*border:  2px solid purple;*/

@@ -2,22 +2,20 @@
       {
             "type": "Feature",
             "properties": {
-                  "@id": "node/4837676614",
-                  "access": "customers",
-                  "leisure": "sports_centre",
-                  "name": "Norris Aquatics Center",
-                  "operator": "Northwestern University",
-                  "sport": "swimming"
+              "@id": "node/9278938940",
+              "amenity": "cafe",
+              "name": "Cafe Coralie",
+              "website": "https://www.bestfrenchpastries.com/"
             },
             "geometry": {
-                  "type": "Point",
-                  "coordinates": [
-                        -87.6736339,
-                        42.0600667
-                  ]
+              "type": "Point",
+              "coordinates": [
+                -87.673396,
+                42.0572204
+              ]
             },
-            "id": "node/4837676614"
-      },
+            "id": "node/9278938940"
+          },
       {
             "type": "Feature",
             "properties": {
@@ -62,19 +60,19 @@
       {
             "type": "Feature",
             "properties": {
-                  "@id": "node/3938460118",
-                  "name": "Community Data Science Collective",
-                  "office": "research"
+              "@id": "node/4724992902",
+              "leisure": "park",
+              "name": "Northwestern Lakefill"
             },
             "geometry": {
-                  "type": "Point",
-                  "coordinates": [
-                        -87.6739811,
-                        42.0583776
-                  ]
+              "type": "Point",
+              "coordinates": [
+                -87.6738243,
+                42.0544769
+              ]
             },
-            "id": "node/3938460118"
-      },
+            "id": "node/4724992902"
+          },
       {
             "type": "Feature",
             "properties": {
@@ -219,6 +217,7 @@
             "properties": {
                   "@id": "node/2239483482",
                   "entrance": "entrance",
+                  "name":"NU Tech Institute",
                   "foot": "yes"
             },
             "geometry": {
@@ -234,7 +233,8 @@
             "type": "Feature",
             "properties": {
                   "@id": "node/4777157991",
-                  "entrance": "yes"
+                  "entrance": "yes",
+                  "name":"Deering Library"
             },
             "geometry": {
                   "type": "Point",
