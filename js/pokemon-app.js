@@ -11,7 +11,7 @@ const UPDATE_RATE = 100
  If its vertical, the columns can become sections in one column
  */
 
-let instructions = "Please select a landmark \n and answer the questions to earn points."
+let instructions = "Please select a landmark from the amp and answer the questions to earn points. Come visit again."
 let landmarkCount = 0
 let pokemon = [
 	"Bulbasaur",
@@ -349,14 +349,13 @@ let map = new InteractiveMap({
 					template: `
 					<div id="quiz">
 					<header></header>
-					<br>
-						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<p> Your Question of the day is</p>
-						<div> The {{gameState.currentLandmark}} is which style patisserie</div>
-						<button v-on:click="show">French</button>
-						<button v-on:click="wrong">Italian</button>
-						<button v-on:click="wrong">American</button>
-						<button v-on:click="wrong">German</button>
+					<div id="quest-title"> Welcome to <span id="quest-location">{{gameState.currentLandmark}}</span></div>
+					<p> Your Question is ... </p>
+						<div id="quest-question"> The {{gameState.currentLandmark}} is which style patisserie</div>
+						<button v-on:click="show" id="quest-choice">French</button>
+						<button v-on:click="wrong" id="quest-choice">Italian</button>
+						<button v-on:click="wrong" id="quest-choice">American</button>
+						<button v-on:click="wrong" id="quest-choice">German</button>
 					<footer></footer>
 					</div>`,
 			
@@ -370,7 +369,7 @@ let map = new InteractiveMap({
 						show:function(event){
 							console.log("option 1 selected")
 							gameState.points +=1
-							window.alert("Correct answer, carry on to next location")
+							window.alert("Kudos !! Carry onto the next location, traveller")
 							gameState.captured.push(landmark.name)
 							document.getElementById("quiz").style.display="none"
 
@@ -378,7 +377,7 @@ let map = new InteractiveMap({
 						wrong:function(event){
 							console.log("option 1 selected")
 							
-							window.alert("Wrong answer, try again when u visit the location next time")
+							window.alert("Alas, Wrong answer! Fear not traveller. Try again when you visit the location again.")
 							document.getElementById("quiz").style.display="none"
 							gameState.captured.pop();
 							gameState.messages.pop();
@@ -400,14 +399,13 @@ let map = new InteractiveMap({
 					template: `
 					<div id="quiz">
 					<header></header>
-					<br>
-						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<div> How many startups were founded in {{gameState.currentLandmark}}</div>
-						<div> What is you namea</div>
-						<button v-on:click="wrong">around 100</button>
-						<button v-on:click="wrong">less than 500</button>
-						<button v-on:click="show">around 1000</button>
-						<button v-on:click="wrong">more than 2000</button>
+						<div id="quest-title"> Welcome to <span id="quest-location">{{gameState.currentLandmark}}</span></div>
+						<p> Your Question is ... </p>
+						<div id="quest-question"> How many startups were founded in {{gameState.currentLandmark}} ?</div>
+						<button v-on:click="wrong" id="quest-choice" id="quest-choice">Around 100</button>
+						<button v-on:click="wrong" id="quest-choice" id="quest-choice">100+ to 500</button>
+						<button v-on:click="show" id="quest-choice">Around 1000</button>
+						<button v-on:click="wrong" id="quest-choice" id="quest-choice">More than 2000</button>
 					<footer></footer>
 					</div>`,
 			
@@ -421,14 +419,14 @@ let map = new InteractiveMap({
 						show:function(event){
 							console.log("option 1 selected")
 							gameState.points +=1
-							window.alert("Correct answer, carry on to next location")
+							window.alert("Kudos !! Carry onto the next location, traveller")
 							document.getElementById("quiz").style.display="none"
 
 						},
 						wrong:function(event){
 							console.log("option 1 selected")
 							
-							window.alert("Wrong answer, try again when u visit the location next time")
+							window.alert("Alas, Wrong answer! Fear not traveller. Try again when you visit the location again.")
 							document.getElementById("quiz").style.display="none"
 							gameState.captured.pop();
 							gameState.messages.pop();
@@ -450,14 +448,13 @@ let map = new InteractiveMap({
 					template: `
 					<div id="quiz">
 					<header></header>
-					<br>
-						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<div> Your Question of the day is</div>
-						<div> What is you namea</div>
-						<button v-on:click="show">Option1</button>
-						<button v-on:click="wrong">Option2</button>
-						<button v-on:click="wrong">Option3</button>
-						<button v-on:click="wrong">Option4</button>
+						<div id="quest-title"> Welcome to <span id="quest-location">{{gameState.currentLandmark}}</span></div>
+						<p> Your Question is ... </p>
+						<div id="quest-question"> Where is this landmark located ?</div>
+						<button v-on:click="wrong" id="quest-choice" id="quest-choice">Near Mudd Library</button>
+						<button v-on:click="wrong" id="quest-choice" id="quest-choice">Near The Garage</button>
+						<button v-on:click="show" id="quest-choice">Near Lakefill</button>
+						<button v-on:click="wrong" id="quest-choice" id="quest-choice">Near Norris</button>
 					<footer></footer>
 					</div>`,
 			
@@ -471,14 +468,14 @@ let map = new InteractiveMap({
 						show:function(event){
 							console.log("option 1 selected")
 							gameState.points +=1
-							window.alert("Correct answer, carry on to next location")
+							window.alert("Kudos !! Carry onto the next location, traveller")
 							document.getElementById("quiz").style.display="none"
 
 						},
 						wrong:function(event){
 							console.log("option 1 selected")
 							
-							window.alert("Wrong answer, try again when u visit the location next time")
+							window.alert("Alas, Wrong answer! Fear not traveller. Try again when you visit the location again.")
 							document.getElementById("quiz").style.display="none"
 							gameState.captured.pop();
 							gameState.messages.pop();
@@ -500,14 +497,13 @@ let map = new InteractiveMap({
 					template: `
 					<div id="quiz">
 					<header></header>
-					<br>
-						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<div> Your Question of the day is</div>
-						<div> What was the name of northwestern president who bought the lakefill area </div>
-						<button v-on:click="wrong">George washington</button>
-						<button v-on:click="show">J Roscoe Miller</button>
-						<button v-on:click="wrong">Patrik G</button>
-						<button v-on:click="wrong">Shirley V Ryan</button>
+						<div id="quest-title"> Welcome to <span id="quest-location">{{gameState.currentLandmark}}</span></div>
+						<p> Your Question is ... </p>
+						<div id="quest-question"> What was the name of northwestern president who bought the lakefill area </div>
+						<button v-on:click="wrong" id="quest-choice" id="quest-choice">George washington</button>
+						<button v-on:click="show" id="quest-choice">J Roscoe Miller</button>
+						<button v-on:click="wrong" id="quest-choice" id="quest-choice">Patrik G</button>
+						<button v-on:click="wrong" id="quest-choice" id="quest-choice">Shirley V Ryan</button>
 					<footer></footer>
 					</div>`,
 			
@@ -521,14 +517,14 @@ let map = new InteractiveMap({
 						show:function(event){
 							console.log("option 1 selected")
 							gameState.points +=1
-							window.alert("Correct answer, carry on to next location")
+							window.alert("Kudos !! Carry onto the next location, traveller")
 							document.getElementById("quiz").style.display="none"
 
 						},
 						wrong:function(event){
 							console.log("option 1 selected")
 							
-							window.alert("Wrong answer, try again when u visit the location next time")
+							window.alert("Alas, Wrong answer! Fear not traveller. Try again when you visit the location again.")
 							document.getElementById("quiz").style.display="none"
 							gameState.captured.pop();
 							gameState.messages.pop();
@@ -550,14 +546,13 @@ let map = new InteractiveMap({
 					template: `
 					<div id="quiz">
 					<header></header>
-					<br>
-						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<div> Your Question of the day is</div>
-						<div> Who lead the PSA group</div>
-						<button v-on:click="show">Brent Hecht</button>
-						<button v-on:click="wrong">Allen Lin</button>
-						<button v-on:click="wrong">Nick Vincent</button>
-						<button v-on:click="wrong">Isaac Johnson</button>
+						<div id="quest-title"> Welcome to <span id="quest-location">{{gameState.currentLandmark}}</span></div>
+						<p> Your Question is ... </p>
+						<div id="quest-question"> Who lead the PSA group</div>
+						<button v-on:click="show" id="quest-choice">Brent Hecht</button>
+						<button v-on:click="wrong" id="quest-choice" id="quest-choice">Allen Lin</button>
+						<button v-on:click="wrong" id="quest-choice" id="quest-choice">Nick Vincent</button>
+						<button v-on:click="wrong" id="quest-choice" id="quest-choice">Isaac Johnson</button>
 					<footer></footer>
 					</div>`,
 			
@@ -571,14 +566,14 @@ let map = new InteractiveMap({
 						show:function(event){
 							console.log("option 1 selected")
 							gameState.points +=1
-							window.alert("Correct answer, carry on to next location")
+							window.alert("Kudos !! Carry onto the next location, traveller")
 							document.getElementById("quiz").style.display="none"
 
 						},
 						wrong:function(event){
 							console.log("option 1 selected")
 							
-							window.alert("Wrong answer, try again when u visit the location next time")
+							window.alert("Alas, Wrong answer! Fear not traveller. Try again when you visit the location again.")
 							document.getElementById("quiz").style.display="none"
 							gameState.captured.pop();
 							gameState.messages.pop();
@@ -600,12 +595,11 @@ let map = new InteractiveMap({
 					template: `
 					<div id="quiz">
 					<header></header>
-					<br>
-						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<div> Your Question of the day is</div>
-						<div>Delta Lab is the first interdisciplinary research lab and design studio at Northwestern University. They study, design, and build systems in the domain of social and crowd computing, human computer interaction, learning sciences, civics, and innovation. </div>
-						<button v-on:click="show">True</button>
-						<button v-on:click="wrong">False</button>
+						<div id="quest-title"> Welcome to <span id="quest-location">{{gameState.currentLandmark}}</span></div>
+						<p> Your Question is ... </p>
+						<div id="quest-question">Delta Lab is the first interdisciplinary research lab and design studio at Northwestern University. They study, design, and build systems in the domain of social and crowd computing, human computer interaction, learning sciences, civics, and innovation. </div>
+						<button v-on:click="show" id="quest-choice">True</button>
+						<button v-on:click="wrong" id="quest-choice" id="quest-choice">False</button>
 					<footer></footer>
 					</div>`,
 			
@@ -619,14 +613,14 @@ let map = new InteractiveMap({
 						show:function(event){
 							console.log("option 1 selected")
 							gameState.points +=1
-							window.alert("Correct answer, carry on to next location")
+							window.alert("Kudos !! Carry onto the next location, traveller")
 							document.getElementById("quiz").style.display="none"
 
 						},
 						wrong:function(event){
 							console.log("option 1 selected")
 							
-							window.alert("Wrong answer, try again when u visit the location next time")
+							window.alert("Alas, Wrong answer! Fear not traveller. Try again when you visit the location again.")
 							document.getElementById("quiz").style.display="none"
 							gameState.captured.pop();
 							gameState.messages.pop();
@@ -648,14 +642,13 @@ let map = new InteractiveMap({
 					template: `
 					<div id="quiz">
 					<header></header>
-					<br>
-						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<div> Your Question of the day is</div>
-						<div> {{gameState.currentLandmark}} was built in</div>
-						<button v-on:click="show"> 1972</button>
-						<button v-on:click="wrong">1987</button>
-						<button v-on:click="wrong">2001</button>
-						<button v-on:click="wrong">1982</button>
+						<div id="quest-title"> Welcome to <span id="quest-location">{{gameState.currentLandmark}}</span></div>
+						<p> Your Question is ... </p>
+						<div id="quest-question"> {{gameState.currentLandmark}} was built in</div>
+						<button v-on:click="show" id="quest-choice"> 1972</button>
+						<button v-on:click="wrong" id="quest-choice">1987</button>
+						<button v-on:click="wrong" id="quest-choice">2001</button>
+						<button v-on:click="wrong" id="quest-choice">1982</button>
 					<footer></footer>
 					</div>`,
 			
@@ -669,14 +662,14 @@ let map = new InteractiveMap({
 						show:function(event){
 							console.log("option 1 selected")
 							gameState.points +=1
-							window.alert("Correct answer, carry on to next location")
+							window.alert("Kudos !! Carry onto the next location, traveller")
 							document.getElementById("quiz").style.display="none"
 
 						},
 						wrong:function(event){
 							console.log("option 1 selected")
 							
-							window.alert("Wrong answer, try again when u visit the location next time")
+							window.alert("Alas, Wrong answer! Fear not traveller. Try again when you visit the location again.")
 							document.getElementById("quiz").style.display="none"
 							gameState.captured.pop();
 							gameState.messages.pop();
@@ -698,14 +691,13 @@ let map = new InteractiveMap({
 					template: `
 					<div id="quiz">
 					<header></header>
-					<br>
-						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<div> Your Question of the day is</div>
-						<div>Which tool is not made by {{gameState.currentLandmark}}</div>
-						<button v-on:click="show">ARScene</button>
-						<button v-on:click="wrong">SceneVR</button>
-						<button v-on:click="wrong">Juxatpose</button>
-						<button v-on:click="wrong">Soundcit</button>
+						<div id="quest-title"> Welcome to <span id="quest-location">{{gameState.currentLandmark}}</span></div>
+						<p> Your Question is ... </p>
+						<div id="quest-question">Which tool is not made by {{gameState.currentLandmark}}</div>
+						<button v-on:click="show" id="quest-choice">ARScene</button>
+						<button v-on:click="wrong" id="quest-choice">SceneVR</button>
+						<button v-on:click="wrong" id="quest-choice">Juxatpose</button>
+						<button v-on:click="wrong" id="quest-choice">Soundcit</button>
 					<footer></footer>
 					</div>`,
 			
@@ -719,14 +711,14 @@ let map = new InteractiveMap({
 						show:function(event){
 							console.log("option 1 selected")
 							gameState.points +=1
-							window.alert("Correct answer, carry on to next location")
+							window.alert("Kudos !! Carry onto the next location, traveller")
 							document.getElementById("quiz").style.display="none"
 
 						},
 						wrong:function(event){
 							console.log("option 1 selected")
 							
-							window.alert("Wrong answer, try again when u visit the location next time")
+							window.alert("Alas, Wrong answer! Fear not traveller. Try again when you visit the location again.")
 							document.getElementById("quiz").style.display="none"
 							gameState.captured.pop();
 							gameState.messages.pop();
@@ -748,14 +740,13 @@ let map = new InteractiveMap({
 					template: `
 					<div id="quiz">
 					<header></header>
-					<br>
-						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<div> Your Question of the day is</div>
-						<div> {{gameState.currentLandmark}} was designed by</div>
-						<button v-on:click="show">Walter Nesch</button>
-						<button v-on:click="wrong">henry Crown</button>
-						<button v-on:click="wrong">Patrick kellog</button>
-						<button v-on:click="wrong">Charles Deering</button>
+						<div id="quest-title"> Welcome to <span id="quest-location">{{gameState.currentLandmark}}</span></div>
+						<p> Your Question is ... </p>
+						<div id="quest-question"> {{gameState.currentLandmark}} was designed by</div>
+						<button v-on:click="show" id="quest-choice">Walter Nesch</button>
+						<button v-on:click="wrong" id="quest-choice">henry Crown</button>
+						<button v-on:click="wrong" id="quest-choice">Patrick kellog</button>
+						<button v-on:click="wrong" id="quest-choice">Charles Deering</button>
 					<footer></footer>
 					</div>`,
 			
@@ -769,14 +760,14 @@ let map = new InteractiveMap({
 						show:function(event){
 							console.log("option 1 selected")
 							gameState.points +=1
-							window.alert("Correct answer, carry on to next location")
+							window.alert("Kudos !! Carry onto the next location, traveller")
 							document.getElementById("quiz").style.display="none"
 
 						},
 						wrong:function(event){
 							console.log("option 1 selected")
 							
-							window.alert("Wrong answer, try again when u visit the location next time")
+							window.alert("Alas, Wrong answer! Fear not traveller. Try again when you visit the location again.")
 							document.getElementById("quiz").style.display="none"
 							gameState.captured.pop();
 							gameState.messages.pop();
@@ -798,12 +789,11 @@ let map = new InteractiveMap({
 					template: `
 					<div id="quiz">
 					<header></header>
-					<br>
-						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<div> Your Question of the day is</div>
-						<div> Block cinema is free for all</div>
-						<button v-on:click="show">True</button>
-						<button v-on:click="wrong">False</button>
+						<div id="quest-title"> Welcome to <span id="quest-location">{{gameState.currentLandmark}}</span></div>
+						<p> Your Question is ... </p>
+						<div id="quest-question"> Block cinema is free for all ?</div>
+						<button v-on:click="show" id="quest-choice">True</button>
+						<button v-on:click="wrong" id="quest-choice">False</button>
 					<footer></footer>
 					</div>`,
 			
@@ -817,14 +807,14 @@ let map = new InteractiveMap({
 						show:function(event){
 							console.log("option 1 selected")
 							gameState.points +=1
-							window.alert("Correct answer, carry on to next location")
+							window.alert("Kudos !! Carry onto the next location, traveller")
 							document.getElementById("quiz").style.display="none"
 
 						},
 						wrong:function(event){
 							console.log("option 1 selected")
 							
-							window.alert("Wrong answer, try again when u visit the location next time")
+							window.alert("Alas, Wrong answer! Fear not traveller. Try again when you visit the location again.")
 							document.getElementById("quiz").style.display="none"
 							gameState.captured.pop();
 							gameState.messages.pop();
@@ -846,14 +836,13 @@ let map = new InteractiveMap({
 					template: `
 					<div id="quiz">
 					<header></header>
-					<br>
-						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<div> Your Question of the day is</div>
-						<div> {{gameState.currentLandmark}} was founded in</div>
-						<button v-on:click="show">1942</button>
-						<button v-on:click="wrong">1842</button>
-						<button v-on:click="wrong">1943</button>
-						<button v-on:click="wrong">1987</button>
+						<div id="quest-title"> Welcome to <span id="quest-location">{{gameState.currentLandmark}}</span></div>
+						<p> Your Question is ... </p>
+						<div id="quest-question"> {{gameState.currentLandmark}} was founded in</div>
+						<button v-on:click="show" id="quest-choice">1942</button>
+						<button v-on:click="wrong" id="quest-choice">1842</button>
+						<button v-on:click="wrong" id="quest-choice">1943</button>
+						<button v-on:click="wrong" id="quest-choice">1987</button>
 					<footer></footer>
 					</div>`,
 			
@@ -867,14 +856,14 @@ let map = new InteractiveMap({
 						show:function(event){
 							console.log("option 1 selected")
 							gameState.points +=1
-							window.alert("Correct answer, carry on to next location")
+							window.alert("Kudos !! Carry onto the next location, traveller")
 							document.getElementById("quiz").style.display="none"
 
 						},
 						wrong:function(event){
 							console.log("option 1 selected")
 							
-							window.alert("Wrong answer, try again when u visit the location next time")
+							window.alert("Alas, Wrong answer! Fear not traveller. Try again when you visit the location again.")
 							document.getElementById("quiz").style.display="none"
 							gameState.captured.pop();
 							gameState.messages.pop();
@@ -896,14 +885,13 @@ let map = new InteractiveMap({
 					template: `
 					<div id="quiz">
 					<header></header>
-					<br>
-						<div>Welcome to {{gameState.currentLandmark}}</div>
-						<div> Your Question of the day is</div>
-						<div> {{gameState.currentLandmark}} is modeled after which monument</div>
-						<button v-on:click="show">King's College Chapel, England</button>
-						<button v-on:click="wrong">Charles Deering Architectural Building</button>
-						<button v-on:click="wrong">Ryan Musical Center</button>
-						<button v-on:click="wrong">Chapel of the first, New England</button>
+						<div id="quest-title"> Welcome to <span id="quest-location">{{gameState.currentLandmark}}</span></div>
+						<p> Your Question is ... </p>
+						<div id="quest-question"> {{gameState.currentLandmark}} is modeled after which monument</div>
+						<button v-on:click="show" id="quest-choice">King's College Chapel, England</button>
+						<button v-on:click="wrong" id="quest-choice">Charles Deering Architectural Building</button>
+						<button v-on:click="wrong" id="quest-choice">Ryan Musical Center</button>
+						<button v-on:click="wrong" id="quest-choice">Chapel of the first, New England</button>
 					<footer></footer>
 					</div>`,
 			
@@ -917,14 +905,14 @@ let map = new InteractiveMap({
 						show:function(event){
 							console.log("option 1 selected")
 							gameState.points +=1
-							window.alert("Correct answer, carry on to next location")
+							window.alert("Kudos !! Carry onto the next location, traveller")
 							document.getElementById("quiz").style.display="none"
 
 						},
 						wrong:function(event){
 							console.log("option 1 selected")
 							
-							window.alert("Wrong answer, try again when u visit the location next time")
+							window.alert("Alas, Wrong answer! Fear not traveller. Try again when you visit the location again.")
 							document.getElementById("quiz").style.display="none"
 							gameState.captured.pop();
 							gameState.messages.pop();
@@ -999,7 +987,7 @@ window.onload = (event) => {
 			<div id="main-columns">
 
 				<div class="main-column">
-					<div id="instructions">{{instructions}} {{gameState}}</div>
+					<div id="instructions">{{instructions}} <br><br> {{gameState}}</div>
 					<div id="quiz"></div>
 				</div>
 				
